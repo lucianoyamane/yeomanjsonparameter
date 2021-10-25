@@ -1,0 +1,21 @@
+{
+  "name": "generator-jsparam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yo": "^4.3.0",
+    "yeoman-generator": "5.4.2"
+  }
+}
