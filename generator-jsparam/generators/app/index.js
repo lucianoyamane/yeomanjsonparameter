@@ -1,5 +1,6 @@
 var Generator = require('yeoman-generator');
 const fs = require('fs');
+const { UploadFile } = require('../../upload.file');
 
 module.exports = class extends Generator {
 
@@ -13,8 +14,12 @@ module.exports = class extends Generator {
 
         let rawdata = fs.readFileSync(this.options.arquivo);
         let resultado = JSON.stringify(JSON.parse(rawdata), null, 2);
-        
+
         this.log(resultado);
+
+        new UploadFile().writeFile(__dirname + '/out/test_out2.json', resultado);
+        
+        
 
     }
 
