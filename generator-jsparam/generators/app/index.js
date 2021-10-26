@@ -16,6 +16,9 @@ module.exports = class extends Generator {
         let resultado = JSON.stringify(JSON.parse(rawdata), null, 2);
 
         this.log(resultado);
+        if (!fs.existsSync(__dirname + '/out')){
+            fs.mkdirSync(__dirname + '/out');
+        }
 
         new UploadFile().writeFile(__dirname + '/out/test_out2.json', resultado);
         
